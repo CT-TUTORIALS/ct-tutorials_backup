@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C&T Tutorials | Academic Excellence</title>
+
+  <!-- CSS -->
+  <style>
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; line-height:1.6; color:#222; }
+    
+    /* Header styling */
+    header { 
+      background:#0b3c5d; 
+      color:#fff; 
+      padding:2rem 1rem; 
+      text-align:center; 
+      display:flex; 
+      flex-direction: column; 
+      align-items: center; 
+      justify-content: center;
+    }
+
+    /* Logo styling */
+    header img { 
+      max-width:150px;      
+      width: 30vw;          
+      height: auto; 
+      margin-bottom:1rem; 
+      transition: transform 0.3s ease; /* hover animation */
+    }
+
+    header img:hover {
+      transform: scale(1.1); /* gently grows 10% on hover */
+    }
+
+    header h1 { 
+      font-size: 1.8rem; 
+      margin:0.3rem 0; 
+    }
+
+    header p { 
+      font-size: 1rem; 
+      margin:0; 
+    }
+
+    nav { 
+      background:#07293f; 
+      padding:0.7rem; 
+      text-align:center; 
+      position:sticky; 
+      top:0; 
+    }
+
+    nav a { 
+      color:#fff; 
+      margin:0 1rem; 
+      text-decoration:none; 
+      font-weight:bold; 
+      font-size:1rem; 
+      transition: color 0.3s ease, transform 0.2s ease; /* hover animation */
+    }
+
+    nav a:hover {
+      color: #ffd700;  /* golden highlight on hover */
+      transform: scale(1.05);
+    }
+
+    section { 
+      padding:3rem 5%; 
+    }
+
+    .hero { 
+      background:#f4f6f8; 
+      text-align:center; 
+    }
+
+    .cards { 
+      display:grid; 
+      grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); 
+      gap:1.5rem; 
+    }
+
+    .card { 
+      border:1px solid #ddd; 
+      border-radius:8px; 
+      padding:1.5rem; 
+      box-shadow:0 2px 5px rgba(0,0,0,0.05); 
+    }
+
+    form { max-width:600px; margin:auto; }
+    label { display:block; margin-top:1rem; font-weight:bold; }
+    input, select, textarea { width:100%; padding:0.6rem; margin-top:0.3rem; }
+    button { margin-top:1.2rem; background:#0b3c5d; color:#fff; border:none; padding:0.8rem 1.5rem; border-radius:4px; cursor:pointer; }
+    button:hover { background:#07293f; }
+    footer { background:#0b3c5d; color:#fff; text-align:center; padding:1.5rem; }
+    .policy { background:#f9fafb; border-left:4px solid #0b3c5d; padding:1.5rem; margin-bottom:1.5rem; }
+
+    /* Mobile adjustments */
+    @media (max-width: 480px) {
+      header h1 { font-size:1.5rem; }
+      header p { font-size:0.9rem; }
+      nav a { font-size:0.9rem; margin:0 0.5rem; }
+      .cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <!-- Embedded logo -->
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAYACAIAAABn4K39AAC4U2NhQlgAALhTanVtYgAAAB5qdW1kYzJwYQARABCAAACqADibcQNjMnBhAAAANvRqdW1iAAAAR2p1bWRjMm1hABEAEIAAAKoAOJtxA3VybjpjMnBhOjQ5NDYzNjYwLTMyMDQtNDkzOS05Y2U0LTQ4YzE1MjU4NTI2ZQAAAAHBanVtYgAAAClqdW1kYzJhcwARABCAAACqADibcQNjMnBhLmFzc2VydGlvbnMAAAAA5Wp1bWIAAAApanVtZGNib3IAEQAQgAAAqgA4m3EDYzJwYS5hY3Rpb25zLnYyAAAAALRjYm9yoWdhY3Rpb25zgqNmYWN0aW9ubGMycGEuY3JlYXRlZG1zb2Z0d2FyZUFnZW50v2RuYW1lZkdQVC00b/9xZGlnaXRhbFNvdXJjZVR5cGV4Rmh0dHA6Ly9jdi5pcHRjLm9yZy9uZXdzY29kZXMvZGln" alt="C&T Tutorials Logo" />
+    <h1>C&T TUTORIALS</h1>
+    <p>Your academic support partner</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#register">Register</a>
+    <a href="#policies">Policies</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero">
+    <h2>Professional Academic Support</h2>
+    <p>Structured tutoring, academic writing support, and study skills development for school and university students.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>C&T Tutorials is a Namibian-based academic support firm offering independent tutoring and academic guidance.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Academic Writing</h3>
+        <p>Essay structure, referencing (APA), research proposals, and editing support.</p>
+      </div>
+      <div class="card">
+        <h3>University & School Tutoring</h3>
+        <p>Foundation, undergraduate, and selected high school subjects.</p>
+      </div>
+      <div class="card">
+        <h3>Study Skills Coaching</h3>
+        <p>Time management, exam preparation, and academic confidence building.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="register">
+    <h2>Student Registration</h2>
+    <form id="registrationForm">
+      <label>Full Name</label>
+      <input type="text" name="fullname" required />
+
+      <label>Email Address</label>
+      <input type="email" name="email" required />
+
+      <label>Phone Number</label>
+      <input type="tel" name="phone" />
+
+      <label>Level of Study</label>
+      <select name="level">
+        <option>High School</option>
+        <option>University Foundation</option>
+        <option>Undergraduate</option>
+      </select>
+
+      <label>Service Required</label>
+      <textarea name="service" placeholder="Briefly describe the help you need"></textarea>
+
+      <button type="submit">Submit Registration</button>
+    </form>
+  </section>
+
+  <section id="policies">
+    <h2>Policies & Disclaimer</h2>
+    <div class="policy">
+      <h3>Academic Integrity Policy</h3>
+      <p>C&T Tutorials provides guidance and instructional support only. We do not complete assessments, examinations, or assignments on behalf of students.</p>
+    </div>
+    <div class="policy">
+      <h3>Independent Disclaimer</h3>
+      <p>C&T Tutorials operates as an independent academic support firm.</p>
+    </div>
+    <div class="policy">
+      <h3>Payment & Attendance Policy</h3>
+      <p>Sessions must be paid for in advance. Missed sessions without prior notice may be forfeited.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Phone: +264818479958 / +264815621879</p>
+    <p>Email: <a href="mailto:ct0tutorials@gmail.com">ct0tutorials@gmail.com</a></p>
+    <p>Location: Ongwediva, Namibia</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 C&T Tutorials. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    document.getElementById('registrationForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for registering! We will contact you soon.');
+    });
+  </script>
+
+</body>
+</html>
