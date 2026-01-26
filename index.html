@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>C&T Tutorials | Student Registration</title>
+  <title>C&T Tutorials | Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -10,58 +10,40 @@
       font-family: Arial, sans-serif;
       background-color: #f4f6f8;
       padding: 20px;
+      text-align: center;
     }
     .container {
-      max-width: 600px;
+      max-width: 800px;
       margin: auto;
       background: #ffffff;
-      padding: 25px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
     }
-    h1, h2 {
-      text-align: center;
+    h1 {
       color: #1f3c88;
+      margin-bottom: 10px;
     }
     p {
-      text-align: center;
       color: #555;
+      font-size: 16px;
+      line-height: 1.6;
     }
-    label {
-      font-weight: bold;
-      margin-top: 15px;
-      display: block;
-    }
-    input, select, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 6px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      font-size: 14px;
-    }
-    button {
-      margin-top: 20px;
-      width: 100%;
-      padding: 12px;
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 30px;
       background-color: #1f3c88;
       color: #fff;
-      border: none;
-      border-radius: 5px;
+      text-decoration: none;
+      border-radius: 6px;
       font-size: 16px;
-      cursor: pointer;
     }
-    button:hover {
+    .btn:hover {
       background-color: #162d66;
     }
-    .disclaimer {
-      font-size: 12px;
-      color: #555;
-      margin-top: 15px;
-    }
     footer {
-      text-align: center;
-      margin-top: 20px;
+      margin-top: 35px;
       font-size: 12px;
       color: #777;
     }
@@ -69,64 +51,20 @@
 </head>
 
 <body>
-
   <div class="container">
     <h1>C&T TUTORIALS</h1>
-    <p>Supporting students in navigating academic excellence</p>
+    <p>
+      C&T Tutorials is an independent academic support service providing
+      structured tutoring assistance to high school, foundation, and university
+      students. We aim to support learners in navigating their academic journey
+      with clarity, confidence, and consistency.
+    </p>
 
-    <h2>Student Registration Form</h2>
-
-    <form action="https://formspree.io/f/mlgbjkwq" method="POST">
-
-      <label>Full Name</label>
-      <input type="text" name="Full Name" required>
-
-      <label>Email Address</label>
-      <input type="email" name="Email" required>
-
-      <label>Phone Number</label>
-      <input type="tel" name="Phone Number" required>
-
-      <label>Institution</label>
-      <input type="text" name="Institution">
-
-      <label>Subject(s) / Course</label>
-      <input type="text" name="Subjects" required>
-
-      <label>Level of Study</label>
-      <select name="Level of Study" required>
-        <option value="">Select level</option>
-        <option>High School</option>
-        <option>Foundation</option>
-        <option>Undergraduate</option>
-        <option>Postgraduate</option>
-      </select>
-
-      <label>Preferred Tutoring Mode</label>
-      <select name="Tutoring Mode">
-        <option>Online</option>
-        <option>In-person</option>
-        <option>Hybrid</option>
-      </select>
-
-      <label>Additional Information</label>
-      <textarea name="Additional Information" rows="4"></textarea>
-
-      <div class="disclaimer">
-        <input type="checkbox" required>
-        I confirm that the information provided is accurate. I acknowledge that
-        C&T TUTORIALS is an independent tutoring service and not affiliated with
-        any academic institution. I understand that tutoring does not guarantee
-        academic results and that participation is voluntary.
-      </div>
-
-      <button type="submit">Submit Registration</button>
-    </form>
+    <a href="register.html" class="btn">Register for Tutoring</a>
 
     <footer>
       © 2026 C&T Tutorials | Independent Academic Support Services
     </footer>
   </div>
-
 </body>
-          </html>
+</html>
