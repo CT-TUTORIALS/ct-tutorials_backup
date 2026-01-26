@@ -21,21 +21,23 @@
     .hero {
       text-align: center;
     }
-    h1 {
+    h1, h2 {
       color: #1f3c88;
     }
-    p {
+    p, li {
       color: #555;
       line-height: 1.6;
-      font-size: 16px;
+      font-size: 15px;
+    }
+    .slogan {
+      font-style: italic;
+      font-weight: bold;
+      margin-top: 8px;
+      color: #333;
     }
     .divider {
       margin: 40px 0;
       border-top: 1px solid #ddd;
-    }
-    h2 {
-      color: #1f3c88;
-      text-align: center;
     }
     label {
       font-weight: bold;
@@ -63,10 +65,12 @@
     button:hover {
       background-color: #162d66;
     }
-    .disclaimer {
-      font-size: 12px;
-      color: #555;
-      margin-top: 15px;
+    .disclaimer-box {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 6px;
+      margin-top: 20px;
+      font-size: 13px;
     }
     footer {
       text-align: center;
@@ -74,25 +78,49 @@
       font-size: 12px;
       color: #777;
     }
+    /* TEXT-BASED LOGO STYLING */
+    .logo-main {
+      display: inline-block;
+      padding: 15px 25px;
+      border-radius: 12px;
+      background-color: #1f3c88;
+      color: white;
+      font-size: 32px;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+    }
+    .logo-sub {
+      font-size: 18px;
+      font-weight: bold;
+      color: #1f3c88;
+      margin-top: 5px;
+      font-family: Arial, sans-serif;
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- HERO / INTRO SECTION -->
+  <!-- HERO SECTION WITH TEXT-BASED LOGO -->
   <div class="section hero">
+    <!-- LOGO -->
+    <div class="logo-main">C&T</div>
+    <div class="logo-sub">TUTORIALS</div>
+
     <h1>C&T TUTORIALS</h1>
+    <p class="slogan">Staying abreast of your academic journey</p>
+
     <p>
       C&T Tutorials is an independent academic support service offering structured
       tutoring assistance to high school, foundation, and university students.
-      We support learners in navigating their academic journey with clarity,
-      confidence, and consistency.
+      Our services support learners in developing understanding, academic skills,
+      and confidence.
     </p>
   </div>
 
   <div class="divider"></div>
 
-  <!-- REGISTRATION SECTION -->
+  <!-- REGISTRATION FORM -->
   <div class="section">
     <h2>Student Registration</h2>
 
@@ -132,16 +160,44 @@
       <label>Additional Information</label>
       <textarea name="Additional Information" rows="4"></textarea>
 
-      <div class="disclaimer">
+      <div class="disclaimer-box">
         <input type="checkbox" required>
-        I confirm that the information provided is accurate. I acknowledge that
-        C&T TUTORIALS is an independent tutoring service and not affiliated with
-        any academic institution. I understand that tutoring support does not
-        guarantee academic results.
+        I confirm that the information provided is accurate and that I have read
+        and understood the disclaimer and business policies of C&T Tutorials.
       </div>
 
       <button type="submit">Submit Registration</button>
     </form>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- BUSINESS POLICIES -->
+  <div class="section">
+    <h2>Business Policies</h2>
+    <ul>
+      <li>C&T Tutorials provides academic guidance and support only and does not complete assessments on behalf of students.</li>
+      <li>Students must adhere to academic integrity and respectful conduct.</li>
+      <li>Scheduled sessions must be attended punctually.</li>
+      <li>Fees agreed upon are payable as communicated and are non-refundable once services commence.</li>
+      <li>C&T Tutorials reserves the right to suspend or terminate services if policies are breached.</li>
+    </ul>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- DISCLAIMER -->
+  <div class="section">
+    <h2>Disclaimer & Disclosure</h2>
+    <p>
+      C&T Tutorials is an independent tutoring service and is not affiliated with,
+      endorsed by, or acting on behalf of any school, college, university, or
+      examining body. Tutoring does not guarantee academic results.
+    </p>
+    <p>
+      While reasonable care is taken in providing academic support, C&T Tutorials
+      shall not be held liable for academic outcomes or decisions made by students.
+    </p>
   </div>
 
   <footer>
@@ -149,4 +205,4 @@
   </footer>
 
 </body>
-  </html>
+</html>
