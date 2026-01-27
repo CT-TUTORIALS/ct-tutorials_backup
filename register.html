@@ -9,26 +9,50 @@
     body {
       font-family: Arial, sans-serif;
       background-color: #f4f6f8;
-      padding: 20px;
+      margin: 0;
+      padding: 0;
     }
-    .container {
-      max-width: 650px;
-      margin: auto;
-      background: #ffffff;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    h2 {
+
+    /* HEADER / HERO */
+    .hero {
+      background-color: #1f3c88;
+      color: white;
       text-align: center;
-      color: #1f3c88;
-      margin-bottom: 20px;
+      padding: 50px 20px;
     }
+
+    .hero p {
+      color: #eaeaea;
+      max-width: 800px;
+      margin: 10px auto 0;
+      font-size: 15px;
+    }
+
+    .slogan {
+      font-style: italic;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    /* FORM SECTION */
+    .section {
+      max-width: 700px;
+      margin: 30px auto;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 6px;
+    }
+
+    h2 {
+      color: #1f3c88;
+    }
+
     label {
       font-weight: bold;
       margin-top: 15px;
       display: block;
     }
+
     input, select, textarea {
       width: 100%;
       padding: 10px;
@@ -37,31 +61,83 @@
       border: 1px solid #ccc;
       font-size: 14px;
     }
+
     button {
       margin-top: 25px;
       width: 100%;
       padding: 12px;
       background-color: #1f3c88;
-      color: #fff;
+      color: white;
       border: none;
       border-radius: 5px;
       font-size: 16px;
       cursor: pointer;
     }
+
     button:hover {
       background-color: #162d66;
     }
-    .disclaimer {
-      font-size: 12px;
-      color: #555;
+
+    .consent {
       margin-top: 15px;
+      font-size: 13px;
+    }
+
+    .consent input {
+      margin-right: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: #777;
+    }
+
+    a.back {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #1f3c88;
+      font-weight: bold;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <h2>C&T TUTORIALS<br>Student Registration</h2>
+
+  <!-- HEADER -->
+  <div class="hero">
+    <!-- SVG LOGO -->
+    <svg width="220" height="70" viewBox="0 0 220 70" xmlns="http://www.w3.org/2000/svg">
+      <text x="0" y="42"
+            font-family="Arial, Helvetica, sans-serif"
+            font-size="40"
+            font-weight="700"
+            fill="#ffffff">
+        C<tspan fill="#F39C12">&</tspan>T
+      </text>
+
+      <line x1="0" y1="48" x2="95" y2="48"
+            stroke="#ffffff"
+            stroke-width="2"/>
+
+      <text x="0" y="65"
+            font-family="Arial, Helvetica, sans-serif"
+            font-size="16"
+            letter-spacing="2"
+            fill="#eaeaea">
+        TUTORIALS
+      </text>
+    </svg>
+
+    <p class="slogan">Your academic support partner</p>
+    <p>Complete the registration form below to get started with C&T Tutorials.</p>
+  </div>
+
+  <!-- REGISTRATION FORM -->
+  <div class="section">
+    <h2>Student Registration Form</h2>
 
     <form action="https://formspree.io/f/mlgbjkwq" method="POST">
 
@@ -99,16 +175,21 @@
       <label>Additional Information</label>
       <textarea name="Additional Information" rows="4"></textarea>
 
-      <div class="disclaimer">
+      <!-- CONSENT CHECKBOX -->
+      <div class="consent">
         <input type="checkbox" required>
-        I confirm that the information provided is accurate. I acknowledge that
-        C&T TUTORIALS is an independent tutoring service and not affiliated with
-        any academic institution. I understand that tutoring support does not
-        guarantee academic results.
+        I have read and agree to the <a href="index.html#policies">Business Policies</a> and <a href="index.html#disclaimer">Disclaimer & Disclosure</a>.
       </div>
 
       <button type="submit">Submit Registration</button>
     </form>
+
+    <a href="index.html" class="back">← Back to Home</a>
   </div>
+
+  <footer>
+    © 2026 C&T Tutorials | Independent Academic Support Services
+  </footer>
+
 </body>
 </html>
