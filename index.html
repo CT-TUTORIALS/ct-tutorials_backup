@@ -1,190 +1,437 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>C&T TUTORIALS | Your Academic Support Partner</title>
+  <meta charset="UTF-8">
+  <title>C&T Tutorials | Academic Support</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
       font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
       margin: 0;
-      background: #f4f6f8;
-      color: #333;
+      padding: 0;
+      scroll-behavior: smooth;
     }
-
-    header {
-      background: #0b3c5d;
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 32px;
-    }
-
-    header p {
-      margin-top: 8px;
-      font-size: 18px;
-      font-style: italic;
-    }
-
-    section {
+    .section {
       max-width: 900px;
       margin: auto;
-      padding: 30px 20px;
-      background: white;
-      margin-top: 20px;
-      border-radius: 6px;
+      background: #ffffff;
+      padding: 40px;
     }
-
-    h2 {
-      color: #0b3c5d;
+    .hero {
+      text-align: center;
     }
-
-    form {
-      display: grid;
-      gap: 15px;
-      margin-top: 20px;
+    h1, h2 {
+      color: #1f3c88;
     }
-
-    input, select, textarea, button {
-      padding: 10px;
+    p, li {
+      color: #555;
+      line-height: 1.6;
       font-size: 15px;
-      border-radius: 4px;
+    }
+    .slogan {
+      font-style: italic;
+      font-weight: bold;
+      margin-top: 10px;
+      color: #333;
+    }
+    .divider {
+      margin: 40px 0;
+      border-top: 1px solid #ddd;
+    }
+    label {
+      font-weight: bold;
+      margin-top: 15px;
+      display: block;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border-radius: 5px;
       border: 1px solid #ccc;
     }
-
     button {
-      background: #0b3c5d;
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      background-color: #1f3c88;
       color: white;
       border: none;
+      border-radius: 5px;
+      font-size: 16px;
       cursor: pointer;
     }
-
     button:hover {
-      background: #092f48;
+      background-color: #162d66;
     }
-
-    .message {
-      margin-top: 15px;
-      font-weight: bold;
-    }
-
     footer {
       text-align: center;
-      font-size: 13px;
       padding: 20px;
-      color: #666;
+      font-size: 12px;
+      color: #777;
     }
-
-    .policies {
-      font-size: 14px;
-      line-height: 1.6;
-      background: #f9f9f9;
-      padding: 15px;
-      border-left: 4px solid #0b3c5d;
+    .scroll-btn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: #1f3c88;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+    .scroll-btn:hover {
+      background-color: #162d66;
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>C&amp;T TUTORIALS</h1>
-  <p>Your Academic Support Partner</p>
-</header>
+  <!-- HERO SECTION -->
+  <div class="section hero">
 
-<section>
-  <h2>Student Registration</h2>
-  <p>Please complete the form below to register for tutoring services.</p>
+    <!-- SVG LOGO -->
+    <svg width="260" height="70" viewBox="0 0 260 70" xmlns="http://www.w3.org/2000/svg">
+      <text x="0" y="45"
+            font-family="Arial, Helvetica, sans-serif"
+            font-size="40"
+            font-weight="700"
+            fill="#0A3D62">
+        C<tspan fill="#F39C12">&</tspan>T
+      </text>
 
-  <!-- FORM -->
-  <form id="registrationForm" action="https://formspree.io/f/mlgbjkwq" method="POST">
-    
-    <input type="text" name="Full Name" placeholder="Full Name" required />
-    <input type="email" name="Email Address" placeholder="Email Address" required />
-    <input type="tel" name="Contact Number" placeholder="Contact Number" required />
+      <text x="0" y="65"
+            font-family="Arial, Helvetica, sans-serif"
+            font-size="16"
+            letter-spacing="2"
+            fill="#444">
+        TUTORIALS
+      </text>
 
-    <select name="Level of Study" required>
-      <option value="">Level of Study</option>
-      <option>Secondary School</option>
-      <option>University Foundation</option>
-      <option>Undergraduate</option>
-      <option>Postgraduate</option>
-    </select>
+      <line x1="0" y1="50" x2="140" y2="50"
+            stroke="#0A3D62"
+            stroke-width="2"/>
+    </svg>
 
-    <input type="text" name="Course / Subject" placeholder="Course or Subject" required />
-
-    <textarea name="Additional Information" rows="4" placeholder="Any additional information (optional)"></textarea>
-
-    <!-- REQUIRED FOR FORMSPREE -->
-    <input type="hidden" name="_subject" value="New Student Registration – C&T TUTORIALS">
-
-    <button type="submit">Submit Registration</button>
-  </form>
-
-  <div class="message" id="formMessage"></div>
-</section>
-
-<section>
-  <h2>Disclaimer & Business Policies</h2>
-
-  <div class="policies">
-    <p>
-      C&amp;T TUTORIALS is an independent academic support service and is not affiliated with, endorsed by,
-      or acting on behalf of the University of Namibia (UNAM) or any other educational institution.
-    </p>
+    <p class="slogan">Your academic support partner</p>
 
     <p>
-      Tutoring services are supplementary in nature and do not guarantee academic results. Students remain
-      responsible for their own academic submissions, assessments, and compliance with institutional rules.
-    </p>
-
-    <p>
-      By registering, you consent to the collection and use of your information solely for tutoring and
-      administrative purposes. C&amp;T TUTORIALS commits to confidentiality and responsible data handling.
+      C&T Tutorials is an independent academic support service offering structured
+      tutoring assistance to high school, foundation, and university students.
+      Our services support learners in developing understanding, academic skills,
+      and confidence.
     </p>
   </div>
-</section>
 
-<footer>
-  © 2026 C&amp;T TUTORIALS | All Rights Reserved
-</footer>
+  <div class="divider"></div>
 
-<!-- FORM HANDLING -->
-<script>
-  const form = document.getElementById("registrationForm");
-  const message = document.getElementById("formMessage");
+  <!-- REGISTRATION SECTION -->
+  <div class="section" id="registration">
+    <h2>Student Registration</h2>
 
-  form.addEventListener("submit", async function (e) {
-    e.preventDefault();
+    <form action="https://formspree.io/f/mlgbjkwq" method="POST">
 
-    const formData = new FormData(form);
+      <label>Full Name</label>
+      <input type="text" name="Full Name" required>
 
-    try {
-      const response = await fetch(form.action, {
-        method: "POST",
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      });
+      <label>Email Address</label>
+      <input type="email" name="Email" required>
 
-      if (response.ok) {
-        message.style.color = "green";
-        message.textContent = "Registration submitted successfully. We will contact you shortly.";
-        form.reset();
-      } else {
-        message.style.color = "red";
-        message.textContent = "Submission failed. Please try again later.";
-      }
-    } catch (error) {
-      message.style.color = "red";
-      message.textContent = "Network error. Please check your connection.";
+      <label>Phone Number</label>
+      <input type="tel" name="Phone Number" required>
+
+      <label>Institution</label>
+      <input type="text" name="Institution">
+
+      <label>Subject(s) / Course</label>
+      <input type="text" name="Subjects" required>
+
+      <label>Level of Study</label>
+      <select name="Level of Study" required>
+        <option value="">Select level</option>
+        <option>High School</option>
+        <option>Foundation</option>
+        <option>Undergraduate</option>
+        <option>Postgraduate</option>
+      </select>
+
+      <label>Preferred Tutoring Mode</label>
+      <select name="Tutoring Mode">
+        <option>Online</option>
+        <option>In-person</option>
+        <option>Hybrid</option>
+      </select>
+
+      <label>Additional Information</label>
+      <textarea name="Additional Information" rows="4"></textarea>
+
+      <button type="submit">Submit Registration</button>
+    </form>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- BUSINESS POLICIES SECTION -->
+  <div class="section">
+    <h2>Business Policies</h2>
+    <ul>
+      <li>C&T Tutorials provides academic guidance and support only.</li>
+      <li>We do not complete assignments, tests, or examinations on behalf of students.</li>
+      <li>Students are expected to uphold academic integrity at all times.</li>
+      <li>Sessions must be attended punctually as scheduled.</li>
+      <li>Fees agreed upon are non-refundable once services commence.</li>
+      <li>C&T Tutorials reserves the right to suspend or terminate services if policies are breached.</li>
+    </ul>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- DISCLAIMER SECTION -->
+  <div class="section">
+    <h2>Disclaimer & Disclosure</h2>
+    <p>
+      C&T Tutorials is an independent tutoring service and is not affiliated with,
+      endorsed by, or acting on behalf of any school, college, university, or
+      examining body.
+    </p>
+    <p>
+      Academic support does not guarantee academic results. While reasonable care
+      is taken in providing tutoring services, C&T Tutorials shall not be held
+      liable for academic outcomes, decisions, or consequences arising from the
+      use of its services.
+    </p>
+  </div>
+
+  <footer>
+    © 2026 C&T Tutorials | Independent Academic Support Services
+  </footer>
+
+  <!-- FLOATING BUTTON -->
+  <a href="#registration" class="scroll-btn">Register Now</a>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>C&T Tutorials | Academic Support</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
     }
-  });
-</script>
+    .section {
+      max-width: 900px;
+      margin: auto;
+      background: #ffffff;
+      padding: 40px;
+    }
+    .hero {
+      text-align: center;
+    }
+    h1, h2 {
+      color: #1f3c88;
+    }
+    p, li {
+      color: #555;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+    .slogan {
+      font-style: italic;
+      font-weight: bold;
+      margin-top: 10px;
+      color: #333;
+    }
+    .divider {
+      margin: 40px 0;
+      border-top: 1px solid #ddd;
+    }
+    label {
+      font-weight: bold;
+      margin-top: 15px;
+      display: block;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      background-color: #1f3c88;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #162d66;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: #777;
+    }
+    .scroll-btn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: #1f3c88;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+    .scroll-btn:hover {
+      background-color: #162d66;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO SECTION -->
+  <div class="section hero">
+
+    <!-- SVG LOGO -->
+    <svg width="260" height="70" viewBox="0 0 260 70" xmlns="http://www.w3.org/2000/svg">
+      <text x="0" y="45"
+            font-family="Arial, Helvetica, sans-serif"
+            font-size="40"
+            font-weight="700"
+            fill="#0A3D62">
+        C<tspan fill="#F39C12">&</tspan>T
+      </text>
+
+      <text x="0" y="65"
+            font-family="Arial, Helvetica, sans-serif"
+            font-size="16"
+            letter-spacing="2"
+            fill="#444">
+        TUTORIALS
+      </text>
+
+      <line x1="0" y1="50" x2="140" y2="50"
+            stroke="#0A3D62"
+            stroke-width="2"/>
+    </svg>
+
+    <p class="slogan">Your academic support partner</p>
+
+    <p>
+      C&T Tutorials is an independent academic support service offering structured
+      tutoring assistance to high school, foundation, and university students.
+      Our services support learners in developing understanding, academic skills,
+      and confidence.
+    </p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- REGISTRATION SECTION -->
+  <div class="section" id="registration">
+    <h2>Student Registration</h2>
+
+    <form action="https://formspree.io/f/mlgbjkwq" method="POST">
+
+      <label>Full Name</label>
+      <input type="text" name="Full Name" required>
+
+      <label>Email Address</label>
+      <input type="email" name="Email" required>
+
+      <label>Phone Number</label>
+      <input type="tel" name="Phone Number" required>
+
+      <label>Institution</label>
+      <input type="text" name="Institution">
+
+      <label>Subject(s) / Course</label>
+      <input type="text" name="Subjects" required>
+
+      <label>Level of Study</label>
+      <select name="Level of Study" required>
+        <option value="">Select level</option>
+        <option>High School</option>
+        <option>Foundation</option>
+        <option>Undergraduate</option>
+        <option>Postgraduate</option>
+      </select>
+
+      <label>Preferred Tutoring Mode</label>
+      <select name="Tutoring Mode">
+        <option>Online</option>
+        <option>In-person</option>
+        <option>Hybrid</option>
+      </select>
+
+      <label>Additional Information</label>
+      <textarea name="Additional Information" rows="4"></textarea>
+
+      <button type="submit">Submit Registration</button>
+    </form>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- BUSINESS POLICIES SECTION -->
+  <div class="section">
+    <h2>Business Policies</h2>
+    <ul>
+      <li>C&T Tutorials provides academic guidance and support only.</li>
+      <li>We do not complete assignments, tests, or examinations on behalf of students.</li>
+      <li>Students are expected to uphold academic integrity at all times.</li>
+      <li>Sessions must be attended punctually as scheduled.</li>
+      <li>Fees agreed upon are non-refundable once services commence.</li>
+      <li>C&T Tutorials reserves the right to suspend or terminate services if policies are breached.</li>
+    </ul>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- DISCLAIMER SECTION -->
+  <div class="section">
+    <h2>Disclaimer & Disclosure</h2>
+    <p>
+      C&T Tutorials is an independent tutoring service and is not affiliated with,
+      endorsed by, or acting on behalf of any school, college, university, or
+      examining body.
+    </p>
+    <p>
+      Academic support does not guarantee academic results. While reasonable care
+      is taken in providing tutoring services, C&T Tutorials shall not be held
+      liable for academic outcomes, decisions, or consequences arising from the
+      use of its services.
+    </p>
+  </div>
+
+  <footer>
+    © 2026 C&T Tutorials | Independent Academic Support Services
+  </footer>
+
+  <!-- FLOATING BUTTON -->
+  <a href="#registration" class="scroll-btn">Register Now</a>
 
 </body>
   </html>
