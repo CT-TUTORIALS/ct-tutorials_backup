@@ -2,194 +2,216 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>C&T Tutorials | Student Registration</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C&T TUTORIALS | Registration Portal</title>
 
   <style>
+    /* GENERAL STYLING */
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f6f8;
       margin: 0;
-      padding: 0;
+      background: #e8eef3;
+      color: #333;
     }
 
-    /* HEADER / HERO */
-    .hero {
-      background-color: #1f3c88;
+    /* HEADER */
+    header {
+      background: #0b3c5d;
       color: white;
       text-align: center;
-      padding: 50px 20px;
+      padding: 30px 20px;
     }
 
-    .hero p {
-      color: #eaeaea;
-      max-width: 800px;
-      margin: 10px auto 0;
-      font-size: 15px;
+    header h1 {
+      margin: 10px 0 5px 0;
+      font-size: 34px;
     }
 
-    .slogan {
+    header p {
+      margin: 0;
+      font-size: 18px;
       font-style: italic;
-      font-weight: bold;
-      margin-top: 10px;
     }
 
-    /* FORM SECTION */
-    .section {
+    /* SECTION */
+    section {
       max-width: 700px;
       margin: 30px auto;
-      background: #ffffff;
-      padding: 40px;
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    section h2 {
+      color: #0b3c5d;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    /* LOGO IN FORM */
+    .form-logo {
+      display: block;
+      max-width: 150px;
+      margin: 0 auto 20px auto;
+      background-color: #0b3c5d; /* blue background placeholder */
+      padding: 10px;
       border-radius: 6px;
     }
 
-    h2 {
-      color: #1f3c88;
+    form {
+      display: grid;
+      gap: 15px;
     }
 
-    label {
-      font-weight: bold;
-      margin-top: 15px;
-      display: block;
-    }
-
-    input, select, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 6px;
-      border-radius: 5px;
+    input, select, textarea, button {
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 6px;
       border: 1px solid #ccc;
-      font-size: 14px;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #0b3c5d;
+      box-shadow: 0 0 5px rgba(11, 60, 93, 0.3);
     }
 
     button {
-      margin-top: 25px;
-      width: 100%;
-      padding: 12px;
-      background-color: #1f3c88;
+      background: #0b3c5d;
       color: white;
       border: none;
-      border-radius: 5px;
-      font-size: 16px;
       cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
     }
 
     button:hover {
-      background-color: #162d66;
+      background: #092f48;
     }
 
-    .consent {
+    .message {
       margin-top: 15px;
-      font-size: 13px;
+      font-weight: bold;
+      text-align: center;
     }
 
-    .consent input {
-      margin-right: 8px;
+    /* POLICIES */
+    .policies {
+      font-size: 14px;
+      line-height: 1.6;
+      background: #f4f6f8;
+      padding: 15px;
+      border-left: 4px solid #0b3c5d;
+      margin-top: 25px;
+      border-radius: 6px;
     }
 
     footer {
       text-align: center;
+      font-size: 13px;
       padding: 20px;
-      font-size: 12px;
-      color: #777;
+      color: #666;
     }
 
-    a.back {
-      display: inline-block;
-      margin-top: 20px;
-      text-decoration: none;
-      color: #1f3c88;
-      font-weight: bold;
+    @media(max-width: 500px) {
+      section {
+        margin: 20px 10px;
+        padding: 20px 15px;
+      }
     }
   </style>
 </head>
-
 <body>
 
-  <!-- HEADER -->
-  <div class="hero">
-    <!-- SVG LOGO -->
-    <svg width="220" height="70" viewBox="0 0 220 70" xmlns="http://www.w3.org/2000/svg">
-      <text x="0" y="42"
-            font-family="Arial, Helvetica, sans-serif"
-            font-size="40"
-            font-weight="700"
-            fill="#ffffff">
-        C<tspan fill="#F39C12">&</tspan>T
-      </text>
+<header>
+  <h1>C&T TUTORIALS</h1>
+  <p>Your Academic Support Partner</p>
+</header>
 
-      <line x1="0" y1="48" x2="95" y2="48"
-            stroke="#ffffff"
-            stroke-width="2"/>
+<section>
+  <h2>Student Registration Portal</h2>
 
-      <text x="0" y="65"
-            font-family="Arial, Helvetica, sans-serif"
-            font-size="16"
-            letter-spacing="2"
-            fill="#eaeaea">
-        TUTORIALS
-      </text>
-    </svg>
+  <!-- LOGO IN FORM -->
+  <img src="logo.png" alt="C&T TUTORIALS Logo" class="form-logo">
 
-    <p class="slogan">Your academic support partner</p>
-    <p>Complete the registration form below to get started with C&T Tutorials.</p>
+  <!-- FORM -->
+  <form id="registrationForm" action="https://formspree.io/f/mlgbjkwq" method="POST">
+    <input type="text" name="Full Name" placeholder="Full Name" required>
+    <input type="email" name="Email Address" placeholder="Email Address" required>
+    <input type="tel" name="Contact Number" placeholder="Contact Number" required>
+
+    <select name="Level of Study" required>
+      <option value="">Level of Study</option>
+      <option>Secondary School</option>
+      <option>University Foundation</option>
+      <option>Undergraduate</option>
+      <option>Postgraduate</option>
+    </select>
+
+    <input type="text" name="Course / Subject" placeholder="Course or Subject" required>
+
+    <textarea name="Additional Information" rows="4" placeholder="Additional information (optional)"></textarea>
+
+    <input type="hidden" name="_subject" value="New Student Registration – C&T TUTORIALS">
+
+    <button type="submit">Submit Registration</button>
+  </form>
+
+  <div class="message" id="formMessage"></div>
+
+  <!-- DISCLAIMER / POLICIES -->
+  <div class="policies">
+    <p>
+      C&T TUTORIALS is an independent academic support service and is not affiliated with or endorsed by
+      the University of Namibia (UNAM) or any other educational institution.
+    </p>
+    <p>
+      Tutoring services are supplementary and do not guarantee academic results. Students remain responsible
+      for their own academic submissions and compliance with institutional rules.
+    </p>
+    <p>
+      By registering, you consent to the use of your information solely for tutoring and administrative purposes.
+      C&T TUTORIALS commits to confidentiality and responsible data handling.
+    </p>
   </div>
+</section>
 
-  <!-- REGISTRATION FORM -->
-  <div class="section">
-    <h2>Student Registration Form</h2>
+<footer>
+  © 2026 C&T TUTORIALS | All Rights Reserved
+</footer>
 
-    <form action="https://formspree.io/f/mlgbjkwq" method="POST">
+<!-- FORMSPREE HANDLER -->
+<script>
+  const form = document.getElementById("registrationForm");
+  const message = document.getElementById("formMessage");
 
-      <label>Full Name</label>
-      <input type="text" name="Full Name" required>
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
 
-      <label>Email Address</label>
-      <input type="email" name="Email" required>
+    const formData = new FormData(form);
 
-      <label>Phone Number</label>
-      <input type="tel" name="Phone Number" required>
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
 
-      <label>Institution</label>
-      <input type="text" name="Institution">
-
-      <label>Subject(s) / Course</label>
-      <input type="text" name="Subjects" required>
-
-      <label>Level of Study</label>
-      <select name="Level of Study" required>
-        <option value="">Select level</option>
-        <option>High School</option>
-        <option>Foundation</option>
-        <option>Undergraduate</option>
-        <option>Postgraduate</option>
-      </select>
-
-      <label>Preferred Tutoring Mode</label>
-      <select name="Tutoring Mode">
-        <option>Online</option>
-        <option>In-person</option>
-        <option>Hybrid</option>
-      </select>
-
-      <label>Additional Information</label>
-      <textarea name="Additional Information" rows="4"></textarea>
-
-      <!-- CONSENT CHECKBOX -->
-      <div class="consent">
-        <input type="checkbox" required>
-        I have read and agree to the <a href="index.html#policies">Business Policies</a> and <a href="index.html#disclaimer">Disclaimer & Disclosure</a>.
-      </div>
-
-      <button type="submit">Submit Registration</button>
-    </form>
-
-    <a href="index.html" class="back">← Back to Home</a>
-  </div>
-
-  <footer>
-    © 2026 C&T Tutorials | Independent Academic Support Services
-  </footer>
+      if (response.ok) {
+        message.style.color = "green";
+        message.textContent = "Registration submitted successfully. We will contact you shortly.";
+        form.reset();
+      } else {
+        message.style.color = "red";
+        message.textContent = "Submission failed. Please try again later.";
+      }
+    } catch (error) {
+      message.style.color = "red";
+      message.textContent = "Network error. Please check your connection.";
+    }
+  });
+</script>
 
 </body>
 </html>
