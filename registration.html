@@ -2,214 +2,227 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>C&T Tutorials | Student Registration & Academic Support</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>C&T TUTORIALS | Registration Portal</title>
 
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+        content="Register with C&T Tutorials for professional academic support and tutoring services in high school, foundation, and university subjects.">
+  <meta name="keywords"
+        content="C&T Tutorials, academic support, tutoring, Namibia tutoring, student registration, academic writing support">
+  <meta name="author" content="C&T Tutorials">
+
+  <!-- Basic CSS -->
   <style>
-    /* GENERAL STYLING */
     body {
       font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
       margin: 0;
-      background: #e8eef3;
-      color: #333;
+      padding: 0;
     }
 
-    /* HEADER */
-    header {
-      background: #0b3c5d;
+    /* HEADER / HERO */
+    .hero {
+      background-color: #1f3c88;
       color: white;
       text-align: center;
-      padding: 30px 20px;
+      padding: 50px 20px;
     }
 
-    header h1 {
-      margin: 10px 0 5px 0;
-      font-size: 34px;
+    .hero h1 {
+      font-size: 28px;
+      margin-top: 20px;
     }
 
-    header p {
-      margin: 0;
-      font-size: 18px;
+    .slogan {
       font-style: italic;
+      font-weight: bold;
+      margin-top: 10px;
+      color: #eaeaea;
     }
 
-    /* SECTION */
-    section {
-      max-width: 700px;
+    /* FORM SECTION */
+    .section {
+      max-width: 720px;
       margin: 30px auto;
-      background: white;
-      padding: 30px 25px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 6px;
     }
 
-    section h2 {
-      color: #0b3c5d;
-      text-align: center;
-      margin-bottom: 15px;
+    h2 {
+      color: #1f3c88;
+      margin-bottom: 10px;
     }
 
-    /* LOGO IN FORM */
-    .form-logo {
+    label {
+      font-weight: bold;
+      margin-top: 15px;
       display: block;
-      max-width: 150px;
-      margin: 0 auto 20px auto;
-      border-radius: 6px;
+      font-size: 14px;
     }
 
-    form {
-      display: grid;
-      gap: 15px;
-    }
-
-    input, select, textarea, button {
-      padding: 12px;
-      font-size: 16px;
-      border-radius: 6px;
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border-radius: 5px;
       border: 1px solid #ccc;
+      font-size: 14px;
     }
 
-    input:focus, select:focus, textarea:focus {
-      outline: none;
-      border-color: #0b3c5d;
-      box-shadow: 0 0 5px rgba(11, 60, 93, 0.3);
+    textarea {
+      resize: vertical;
     }
 
     button {
-      background: #0b3c5d;
+      margin-top: 25px;
+      width: 100%;
+      padding: 14px;
+      background-color: #1f3c88;
       color: white;
       border: none;
-      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
       font-weight: bold;
-      transition: 0.3s;
+      cursor: pointer;
     }
 
     button:hover {
-      background: #092f48;
+      background-color: #162d66;
     }
 
-    .message {
-      margin-top: 15px;
-      font-weight: bold;
-      text-align: center;
-    }
-
-    /* POLICIES */
-    .policies {
-      font-size: 14px;
-      line-height: 1.6;
-      background: #f4f6f8;
+    .info-box {
+      background: #f0f4ff;
       padding: 15px;
-      border-left: 4px solid #0b3c5d;
-      margin-top: 25px;
-      border-radius: 6px;
+      margin-top: 20px;
+      font-size: 13px;
+      border-left: 4px solid #1f3c88;
+    }
+
+    .consent {
+      margin-top: 20px;
+      font-size: 13px;
     }
 
     footer {
       text-align: center;
-      font-size: 13px;
       padding: 20px;
-      color: #666;
+      font-size: 12px;
+      color: #777;
     }
 
-    @media(max-width: 500px) {
-      section {
-        margin: 20px 10px;
-        padding: 20px 15px;
-      }
+    a {
+      color: #1f3c88;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
+
 <body>
 
-<header>
-  <h1>C&T TUTORIALS</h1>
-  <p>Your Academic Support Partner</p>
-</header>
+  <!-- HEADER -->
+  <div class="hero">
+    <!-- SVG LOGO -->
+    <svg width="220" height="70" viewBox="0 0 220 70" xmlns="http://www.w3.org/2000/svg">
+      <text x="0" y="42"
+            font-family="Arial, Helvetica, sans-serif"
+            font-size="40"
+            font-weight="700"
+            fill="#ffffff">
+        C<tspan fill="#F39C12">&</tspan>T
+      </text>
+      <line x1="0" y1="48" x2="95" y2="48" stroke="#ffffff" stroke-width="2"/>
+      <text x="0" y="65"
+            font-family="Arial, Helvetica, sans-serif"
+            font-size="16"
+            letter-spacing="2"
+            fill="#eaeaea">
+        TUTORIALS
+      </text>
+    </svg>
 
-<section>
-  <h2>Student Registration Portal</h2>
+    <h1>Academic Support & Tutoring Services</h1>
+    <p class="slogan">Your academic support partner</p>
+  </div>
 
-  <!-- LOGO IN FORM -->
-  <img src="https://i.postimg.cc/s2Hd9sTJ/logo_(1).png" alt="C&T TUTORIALS Logo" class="form-logo">
+  <!-- REGISTRATION FORM -->
+  <div class="section">
+    <h2>Student Registration Form</h2>
+    <p>Please complete the form below to register for tutoring support.</p>
 
-  <!-- FORM -->
-  <form id="registrationForm" action="https://formspree.io/f/mlgbjkwq" method="POST">
-    <input type="text" name="Full Name" placeholder="Full Name" required>
-    <input type="email" name="Email Address" placeholder="Email Address" required>
-    <input type="tel" name="Contact Number" placeholder="Contact Number" required>
+    <form action="https://formspree.io/f/mlgbjkwq" method="POST" enctype="multipart/form-data">
 
-    <select name="Level of Study" required>
-      <option value="">Level of Study</option>
-      <option>Secondary School</option>
-      <option>University Foundation</option>
-      <option>Undergraduate</option>
-      <option>Postgraduate</option>
-    </select>
+      <label>Full Name</label>
+      <input type="text" name="Full Name" required>
 
-    <input type="text" name="Course / Subject" placeholder="Course or Subject" required>
+      <label>Email Address</label>
+      <input type="email" name="Email" required>
 
-    <textarea name="Additional Information" rows="4" placeholder="Additional information (optional)"></textarea>
+      <label>Phone Number</label>
+      <input type="tel" name="Phone Number" required>
 
-    <input type="hidden" name="_subject" value="New Student Registration – C&T TUTORIALS">
+      <label>Institution / School</label>
+      <input type="text" name="Institution">
 
-    <button type="submit">Submit Registration</button>
-  </form>
+      <label>Subject(s) / Course</label>
+      <input type="text" name="Subjects" required>
 
-  <div class="message" id="formMessage"></div>
+      <label>Level of Study</label>
+      <select name="Level of Study" required>
+        <option value="">Select level</option>
+        <option>High School</option>
+        <option>Foundation</option>
+        <option>Undergraduate</option>
+        <option>Postgraduate</option>
+      </select>
 
-  <!-- DISCLAIMER / POLICIES -->
-  <div class="policies">
-    <p>
-      C&T TUTORIALS is an independent academic support service and is not affiliated with or endorsed by
-      the University of Namibia (UNAM) or any other educational institution.
-    </p>
-    <p>
-      Tutoring services are supplementary and do not guarantee academic results. Students remain responsible
-      for their own academic submissions and compliance with institutional rules.
-    </p>
-    <p>
-      By registering, you consent to the use of your information solely for tutoring and administrative purposes.
-      C&T TUTORIALS commits to confidentiality and responsible data handling.
+      <label>Preferred Tutoring Mode</label>
+      <select name="Tutoring Mode">
+        <option>Online</option>
+        <option>In-person</option>
+        <option>Hybrid</option>
+      </select>
+
+      <label>Additional Information</label>
+      <textarea name="Additional Information" rows="4"></textarea>
+
+      <!-- FILE UPLOAD -->
+      <label>Upload Supporting Document (optional)</label>
+      <input type="file" name="attachment" accept=".pdf,.doc,.docx,.jpg,.png">
+
+      <!-- DOCUMENT DOWNLOAD LINKS -->
+      <div class="info-box">
+        📎 <strong>Important documents:</strong><br>
+        • <a href="documents/business-policies.pdf" target="_blank">Business Policies (PDF)</a><br>
+        • <a href="documents/academic-writing-notes.pdf" target="_blank">Academic Writing Notes (PDF)</a>
+      </div>
+
+      <!-- CONSENT -->
+      <div class="consent">
+        <input type="checkbox" required>
+        I confirm that I have read and agree to the
+        <a href="index.html#policies">Business Policies</a> and
+        <a href="index.html#disclaimer">Disclaimer & Disclosure</a>.
+      </div>
+
+      <button type="submit">Submit Registration</button>
+    </form>
+
+    <p style="margin-top:20px;">
+      <a href="index.html">← Back to Home</a>
     </p>
   </div>
-</section>
 
-<footer>
-  © 2026 C&T TUTORIALS | All Rights Reserved
-</footer>
-
-<!-- FORMSPREE HANDLER -->
-<script>
-  const form = document.getElementById("registrationForm");
-  const message = document.getElementById("formMessage");
-
-  form.addEventListener("submit", async function (e) {
-    e.preventDefault();
-
-    const formData = new FormData(form);
-
-    try {
-      const response = await fetch(form.action, {
-        method: "POST",
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      });
-
-      if (response.ok) {
-        message.style.color = "green";
-        message.textContent = "Registration submitted successfully. We will contact you shortly.";
-        form.reset();
-      } else {
-        message.style.color = "red";
-        message.textContent = "Submission failed. Please try again later.";
-      }
-    } catch (error) {
-      message.style.color = "red";
-      message.textContent = "Network error. Please check your connection.";
-    }
-  });
-</script>
+  <!-- FOOTER -->
+  <footer>
+    © 2026 C&T Tutorials | Independent Academic Support Services
+  </footer>
 
 </body>
 </html>
