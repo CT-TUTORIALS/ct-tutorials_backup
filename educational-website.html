@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Educational Lesson | C&T Tutorials</title>
+
+    <meta name="description"
+          content="ICT-integrated educational lesson created for the E3612CI Practical Assignment.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            background: #f5f7fa;
+            color: #222;
+        }
+
+        header {
+            background: #17365d;
+            color: white;
+            padding: 25px 20px;
+        }
+
+        header .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        header h1 {
+            margin-bottom: 5px;
+        }
+
+        nav {
+            background: #0f243e;
+            padding: 12px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .container {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 7px 10px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background: #2f75b5;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        main {
+            padding: 30px 20px;
+        }
+
+        section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #17365d;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #2f75b5;
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            color: #245b8f;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .lesson-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .info-card {
+            background: #eef5fb;
+            padding: 15px;
+            border-left: 4px solid #2f75b5;
+            border-radius: 5px;
+        }
+
+        .objective {
+            background: #f8f9fa;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .teaching-aid {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            background: #fafafa;
+        }
+
+        .diagram {
+            min-height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e9f2f9;
+            border: 2px dashed #2f75b5;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin-top: 15px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            border: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #17365d;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f7f7f7;
+        }
+
+        .activity-box {
+            background: #fff8e1;
+            border-left: 5px solid #f0ad4e;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .question {
+            background: #f8f9fa;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+        }
+
+        .question label {
+            display: block;
+            margin: 7px 0;
+        }
+
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+        }
+
+        button {
+            background: #17365d;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #2f75b5;
+        }
+
+        .result {
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 5px;
+            display: none;
+        }
+
+        .success {
+            background: #dff0d8;
+            color: #245b25;
+        }
+
+        .support-card {
+            background: #eef7ee;
+            padding: 15px;
+            margin-bottom: 12px;
+            border-left: 4px solid #5cb85c;
+            border-radius: 5px;
+        }
+
+        .warning {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        footer {
+            background: #0f243e;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: white;
+        }
+
+        @media (max-width: 700px) {
+            nav .container {
+                flex-direction: column;
+            }
+
+            section {
+                padding: 18px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <h1>C&T Tutorials</h1>
+        <p>ICT-Integrated Educational Lesson</p>
+    </div>
+</header>
+
+<nav>
+    <div class="container">
+        <a href="#introduction">Introduction</a>
+        <a href="#content">Learning Content</a>
+        <a href="#lesson-plan">Lesson Plan</a>
+        <a href="#activity">Activity</a>
+        <a href="#assessment">Assessment</a>
+        <a href="#support">Learning Support</a>
+        <a href="#citizenship">Digital Citizenship</a>
+        <a href="#sources">Sources</a>
+    </div>
+</nav>
+
+<main class="container">
+
+    <!-- =========================
+         1. INTRODUCTION
+    ========================== -->
+
+    <section id="introduction">
+
+        <h2>1. Introduction and Learning Objectives</h2>
+
+        <p>
+            Welcome to this educational lesson developed as part of the
+            University of Namibia E3612CI ICT in Teaching & Learning
+            Practical Assignment.
+        </p>
+
+        <div class="lesson-info">
+
+            <div class="info-card">
+                <strong>Subject:</strong><br>
+                YOUR SUBJECT
+            </div>
+
+            <div class="info-card">
+                <strong>Grade:</strong><br>
+                YOUR GRADE
+            </div>
+
+            <div class="info-card">
+                <strong>Topic:</strong><br>
+                YOUR TOPIC
+            </div>
+
+            <div class="info-card">
+                <strong>Duration:</strong><br>
+                YOUR LESSON DURATION
+            </div>
+
+        </div>
+
+        <h3>Learning Objectives</h3>
+
+        <p>
+            By the end of the lesson, learners should be able to:
+        </p>
+
+        <div class="objective">
+            <strong>1.</strong>
+            Define and explain the key concepts related to the topic.
+        </div>
+
+        <div class="objective">
+            <strong>2.</strong>
+            Identify and describe the major elements or characteristics
+            associated with the topic.
+        </div>
+
+        <div class="objective">
+            <strong>3.</strong>
+            Apply their knowledge of the topic to a given problem or
+            practical situation.
+        </div>
+
+        <div class="objective">
+            <strong>4.</strong>
+            Demonstrate their understanding through the interactive
+            activity and assessment.
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         2. LEARNING CONTENT
+    ========================== -->
+
+    <section id="content">
+
+        <h2>2. Learning Content</h2>
+
+        <h3>What is the topic about?</h3>
+
+        <p>
+            Replace this paragraph with your own explanation of the selected
+            topic. Explain the concept in language that is appropriate for
+            your selected grade.
+        </p>
+
+        <h3>Key Concepts</h3>
+
+        <ul>
+            <li><strong>Concept 1:</strong> Explain the first important concept.</li>
+            <li><strong>Concept 2:</strong> Explain the second important concept.</li>
+            <li><strong>Concept 3:</strong> Explain the third important concept.</li>
+            <li><strong>Concept 4:</strong> Explain another relevant concept.</li>
+        </ul>
+
+        <h3>Teaching Aid 1: Labelled Diagram</h3>
+
+        <div class="teaching-aid">
+
+            <div class="diagram">
+
+                <!-- Replace this with your actual diagram/image -->
+
+                <div>
+                    <strong>YOUR LABELLED DIAGRAM</strong>
+                    <br><br>
+                    Insert an educational diagram relevant to your topic here.
+                </div>
+
+            </div>
+
+            <p>
+                <strong>Alternative text:</strong>
+                A labelled diagram illustrating the main components of
+                YOUR TOPIC.
+            </p>
+
+            <p>
+                <strong>Source:</strong>
+                Insert the source of the diagram here.
+            </p>
+
+        </div>
+
+
+        <h3>Teaching Aid 2: Video / Presentation</h3>
+
+        <div class="teaching-aid">
+
+            <!-- Replace VIDEO_ID with an appropriate educational video -->
+
+            <div class="video-container">
+
+                <iframe
+                    src="https://www.youtube.com/embed/VIDEO_ID"
+                    title="Educational video about the lesson topic"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+            <p>
+                <strong>Source:</strong>
+                YouTube / Insert the creator or organisation responsible
+                for the video.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         3. LESSON PLAN
+    ========================== -->
+
+    <section id="lesson-plan">
+
+        <h2>3. ICT-Integrated Lesson Plan</h2>
+
+        <p>
+            The lesson uses the website as a digital teaching and learning
+            environment. Learners can access explanations, teaching aids,
+            participate in an interactive activity and complete the online
+            assessment.
+        </p>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Stage</th>
+                    <th>Teacher Activity</th>
+                    <th>Learner Activity</th>
+                    <th>ICT Integration</th>
+                    <th>Assessment</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td><strong>Introduction</strong></td>
+
+                    <td>
+                        Introduce the topic and activate learners'
+                        prior knowledge.
+                    </td>
+
+                    <td>
+                        Respond to introductory questions and discuss
+                        what they already know.
+                    </td>
+
+                    <td>
+                        Learners access the website and introductory
+                        learning material.
+                    </td>
+
+                    <td>
+                        Oral questioning.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><strong>Content Development</strong></td>
+
+                    <td>
+                        Explain the key concepts using the learning
+                        material and teaching aids.
+                    </td>
+
+                    <td>
+                        Read the explanations, observe the diagram
+                        and watch the educational video.
+                    </td>
+
+                    <td>
+                        Website, diagram and video.
+                    </td>
+
+                    <td>
+                        Questioning and observation.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><strong>Learner Activity</strong></td>
+
+                    <td>
+                        Guide learners through the interactive task.
+                    </td>
+
+                    <td>
+                        Work individually or in groups to complete
+                        the activity.
+                    </td>
+
+                    <td>
+                        Interactive website activity.
+                    </td>
+
+                    <td>
+                        Activity responses.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><strong>Assessment</strong></td>
+
+                    <td>
+                        Administer the digital quiz.
+                    </td>
+
+                    <td>
+                        Complete the online assessment.
+                    </td>
+
+                    <td>
+                        Digital quiz.
+                    </td>
+
+                    <td>
+                        Quiz score.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><strong>Conclusion</strong></td>
+
+                    <td>
+                        Summarise the main concepts and address
+                        misconceptions.
+                    </td>
+
+                    <td>
+                        State what they learned and ask final questions.
+                    </td>
+
+                    <td>
+                        Digital lesson summary.
+                    </td>
+
+                    <td>
+                        Exit question.
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        <h3>Pedagogical Justification</h3>
+
+        <p>
+            The website supports learner-centred teaching by allowing
+            learners to interact with learning materials rather than
+            relying exclusively on teacher explanation. The combination
+            of written content, visual teaching aids, video and an
+            interactive assessment provides learners with different ways
+            of engaging with the topic.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         4. INTERACTIVE ACTIVITY
+    ========================== -->
+
+    <section id="activity">
+
+        <h2>4. Interactive Learning Activity</h2>
+
+        <div class="activity-box">
+
+            <h3>Activity: Apply What You Have Learned</h3>
+
+            <p>
+                Use the information provided in the learning-content
+                section to complete the following task.
+            </p>
+
+            <h4>Instructions</h4>
+
+            <ol>
+                <li>Read the learning content carefully.</li>
+                <li>Study the teaching aid.</li>
+                <li>Identify the important concepts related to the topic.</li>
+                <li>Apply your knowledge to the situation below.</li>
+                <li>Write your answer in your own words.</li>
+            </ol>
+
+            <h4>Task</h4>
+
+            <p>
+                <strong>
+                    Create a response to the following problem:
+                </strong>
+            </p>
+
+            <p>
+                Replace this section with an investigation,
+                problem-solving task or guided discussion appropriate
+                to your selected topic.
+            </p>
+
+            <label for="activity-answer">
+                <strong>Your response:</strong>
+            </label>
+
+            <textarea
+                id="activity-answer"
+                rows="8"
+                placeholder="Type your response here...">
+            </textarea>
+
+            <button onclick="submitActivity()">
+                Submit Activity
+            </button>
+
+            <div id="activity-result" class="result success">
+                Your response has been recorded for this practice activity.
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         5. ASSESSMENT
+    ========================== -->
+
+    <section id="assessment">
+
+        <h2>5. Digital Assessment</h2>
+
+        <p>
+            Answer all questions. The assessment contains
+            <strong>5 questions for a total of 10 marks.</strong>
+        </p>
+
+        <form id="quizForm">
+
+            <!-- Question 1 -->
+
+            <div class="question">
+
+                <p>
+                    <strong>Question 1 (2 marks)</strong>
+                </p>
+
+                <p>
+                    What is the best definition of the main concept
+                    discussed in this lesson?
+                </p>
+
+                <label>
+                    <input type="radio" name="q1" value="a">
+                    Option A
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="b">
+                    Option B
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="c">
+                    Option C
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="d">
+                    Option D
+                </label>
+
+            </div>
+
+
+            <!-- Question 2 -->
+
+            <div class="question">
+
+                <p>
+                    <strong>Question 2 (2 marks)</strong>
+                </p>
+
+                <p>
+                    Which statement correctly describes an important
+                    characteristic of the topic?
+                </p>
+
+                <label>
+                    <input type="radio" name="q2" value="a">
+                    Option A
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="b">
+                    Option B
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="c">
+                    Option C
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="d">
+                    Option D
+                </label>
+
+            </div>
+
+
+            <!-- Question 3 -->
+
+            <div class="question">
+
+                <p>
+                    <strong>Question 3 (2 marks)</strong>
+                </p>
+
+                <p>
+                    Which of the following is an example of applying
+                    the concept?
+                </p>
+
+                <label>
+                    <input type="radio" name="q3" value="a">
+                    Option A
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="b">
+                    Option B
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="c">
+                    Option C
+                </label>
+
+                <label>
+                    <input type="radio" name="q3" value="d">
+                    Option D
+                </label>
+
+            </div>
+
+
+            <!-- Question 4 -->
+
+            <div class="question">
+
+                <p>
+                    <strong>Question 4 (2 marks)</strong>
+                </p>
+
+                <p>
+                    Which statement demonstrates correct understanding
+                    of the topic?
+                </p>
+
+                <label>
+                    <input type="radio" name="q4" value="a">
+                    Option A
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="b">
+                    Option B
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="c">
+                    Option C
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="d">
+                    Option D
+                </label>
+
+            </div>
+
+
+            <!-- Question 5 -->
+
+            <div class="question">
+
+                <p>
+                    <strong>Question 5 (2 marks)</strong>
+                </p>
+
+                <p>
+                    Explain one way in which the knowledge from this
+                    lesson can be applied in a real-life situation.
+                </p>
+
+                <textarea
+                    id="q5"
+                    rows="5"
+                    placeholder="Write your answer here...">
+                </textarea>
+
+            </div>
+
+
+            <button type="button" onclick="submitQuiz()">
+                Submit Quiz
+            </button>
+
+        </form>
+
+        <div id="quizResult" class="result success"></div>
+
+    </section>
+
+
+    <!-- =========================
+         TEACHER MEMORANDUM
+    ========================== -->
+
+    <section id="memorandum">
+
+        <h2>Teacher Memorandum / Answer Key</h2>
+
+        <p>
+            <strong>Important:</strong>
+            This section is intended for the teacher. If the website is
+            publicly accessible to learners, consider placing the full
+            memorandum on a separate teacher-only page rather than
+            displaying it directly below the quiz.
+        </p>
+
+        <ol>
+
+            <li>
+                <strong>Question 1:</strong>
+                Correct answer: INSERT ANSWER.
+                <br>
+                Explanation: INSERT EXPLANATION.
+            </li>
+
+            <li>
+                <strong>Question 2:</strong>
+                Correct answer: INSERT ANSWER.
+                <br>
+                Explanation: INSERT EXPLANATION.
+            </li>
+
+            <li>
+                <strong>Question 3:</strong>
+                Correct answer: INSERT ANSWER.
+                <br>
+                Explanation: INSERT EXPLANATION.
+            </li>
+
+            <li>
+                <strong>Question 4:</strong>
+                Correct answer: INSERT ANSWER.
+                <br>
+                Explanation: INSERT EXPLANATION.
+            </li>
+
+            <li>
+                <strong>Question 5:</strong>
+                Award up to 2 marks for a relevant explanation that
+                correctly applies the concept to a real-life situation.
+            </li>
+
+        </ol>
+
+    </section>
+
+
+    <!-- =========================
+         6. LEARNING SUPPORT
+    ========================== -->
+
+    <section id="support">
+
+        <h2>6. Support for Different Learning Needs</h2>
+
+        <div class="support-card">
+
+            <h3>Adaptation 1: Simplified Instructions</h3>
+
+            <p>
+                Instructions are presented in short, numbered steps and
+                difficult concepts are explained using simpler language.
+            </p>
+
+            <p>
+                <strong>Who does this support?</strong><br>
+                This supports learners who may experience difficulty
+                processing lengthy or complex instructions.
+            </p>
+
+        </div>
+
+
+        <div class="support-card">
+
+            <h3>Adaptation 2: Readable Digital Content</h3>
+
+            <p>
+                The website uses clear headings, readable text, adequate
+                spacing and a responsive layout that can be accessed on
+                different screen sizes.
+            </p>
+
+            <p>
+                <strong>Who does this support?</strong><br>
+                This supports learners who benefit from clearly organised
+                and visually accessible learning materials.
+            </p>
+
+        </div>
+
+
+        <div class="support-card">
+
+            <h3>Adaptation 3: Alternative Text</h3>
+
+            <p>
+                Educational images and diagrams include alternative text
+                describing their important information.
+            </p>
+
+            <p>
+                <strong>Who does this support?</strong><br>
+                This supports learners who use screen readers or have
+                difficulty accessing visual information.
+            </p>
+
+        </div>
+
+
+        <div class="support-card">
+
+            <h3>Adaptation 4: Downloadable Material</h3>
+
+            <p>
+                Learners can be provided with a downloadable copy of the
+                lesson material for offline revision.
+            </p>
+
+            <p>
+                <strong>Who does this support?</strong><br>
+                This supports learners who have limited or intermittent
+                internet access.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         7. DIGITAL CITIZENSHIP
+    ========================== -->
+
+    <section id="citizenship">
+
+        <h2>7. Digital Citizenship</h2>
+
+        <h3>Responsible Online Participation</h3>
+
+        <p>
+            Learners should communicate respectfully when using digital
+            platforms. They should not use technology to bully, harass,
+            impersonate or harm other people.
+        </p>
+
+        <h3>Copyright</h3>
+
+        <p>
+            Learners and teachers should respect copyright when using
+            digital materials. Images, videos, diagrams and other
+            resources should be properly acknowledged and used according
+            to the relevant permissions or licences.
+        </p>
+
+        <h3>Learner Privacy</h3>
+
+        <p>
+            Learners' personal information should not be published on the
+            website without appropriate permission. Learner photographs,
+            contact details and other identifying information should not
+            be publicly displayed.
+        </p>
+
+        <div class="warning">
+            <strong>Privacy reminder:</strong>
+            Do not enter real learner names, telephone numbers,
+            addresses, passwords or other private information into this
+            website.
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SOURCES
+    ========================== -->
+
+    <section id="sources">
+
+        <h2>Sources and Acknowledgements</h2>
+
+        <p>
+            The following sources were consulted in preparing this lesson.
+            Replace these examples with the actual sources used for your
+            topic.
+        </p>
+
+        <ol>
+
+            <li>
+                <strong>Curriculum source:</strong>
+                Insert the official curriculum document and relevant page.
+            </li>
+
+            <li>
+                <strong>Teaching resource:</strong>
+                Insert the title, author/organisation and link.
+            </li>
+
+            <li>
+                <strong>Image/diagram:</strong>
+                Insert creator, title, source and licence where applicable.
+            </li>
+
+            <li>
+                <strong>Video:</strong>
+                Insert creator/channel, video title and link.
+            </li>
+
+        </ol>
+
+    </section>
+
+
+    <!-- =========================
+         REFLECTION
+    ========================== -->
+
+    <section id="reflection">
+
+        <h2>Reflection</h2>
+
+        <p>
+            The assignment requires a separate 300–400-word reflection.
+            The reflection should discuss the teaching approach used,
+            how ICT tools support learning, challenges encountered and
+            possible improvements.
+        </p>
+
+        <p>
+            <strong>
+                Submit the final reflection as a separate document unless
+                your lecturer specifically requests that it appear on the
+                website.
+            </strong>
+        </p>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        &copy; 2026 C&T Tutorials
+    </p>
+
+    <p>
+        Educational resource created for ICT in Teaching & Learning.
+    </p>
+
+    <p>
+        <a href="#introduction">Back to top</a>
+    </p>
+
+</footer>
+
+
+<script>
+
+    /*
+     * INTERACTIVE ACTIVITY
+     */
+
+    function submitActivity() {
+
+        const answer =
+            document.getElementById("activity-answer").value.trim();
+
+        const result =
+            document.getElementById("activity-result");
+
+        if (answer === "") {
+
+            alert("Please enter your response before submitting.");
+
+            return;
+        }
+
+        result.style.display = "block";
+
+        result.innerHTML =
+            "Your practice response has been recorded. " +
+            "Review your answer against the lesson content.";
+
+    }
+
+
+    /*
+     * DIGITAL QUIZ
+     *
+     * Replace the answer key below after creating your
+     * actual five questions.
+     */
+
+    function submitQuiz() {
+
+        let score = 0;
+
+        /*
+         * Example answer key.
+         *
+         * Change these values:
+         * q1, q2, q3 and q4
+         * to match your actual questions.
+         */
+
+        const answers = {
+            q1: "a",
+            q2: "b",
+            q3: "c",
+            q4: "d"
+        };
+
+
+        for (const question in answers) {
+
+            const selected =
+                document.querySelector(
+                    'input[name="' + question + '"]:checked'
+                );
+
+            if (selected && selected.value === answers[question]) {
+
+                score += 2;
+
+            }
+
+        }
+
+
+        /*
+         * Question 5 is a written-response question.
+         *
+         * It is deliberately not automatically marked.
+         */
+
+        const q5 =
+            document.getElementById("q5").value.trim();
+
+
+        if (q5 === "") {
+
+            alert(
+                "Please answer Question 5 before submitting the quiz."
+            );
+
+            return;
+
+        }
+
+
+        const result =
+            document.getElementById("quizResult");
+
+        result.style.display = "block";
+
+        result.innerHTML =
+            "<strong>Quiz submitted.</strong><br>" +
+            "Automatically calculated score: " +
+            score +
+            "/8.<br><br>" +
+            "Question 5 should be marked by the teacher " +
+            "using the memorandum. The complete assessment is " +
+            "worth 10 marks.";
+
+    }
+
+</script>
+
+</body>
+</html>
